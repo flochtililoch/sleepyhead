@@ -3,7 +3,7 @@ zipObject = require 'lodash'
 CSON = require 'cson'
 debug = (require 'debug')('app')
 
-{user, server} = CSON.load('./config.cson')
+{user, server} = CSON.load("#{__dirname}/config.cson")
 
 webhook = (data) ->
   {title, categories, mt_keywords, description} = data
